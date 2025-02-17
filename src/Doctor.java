@@ -1,15 +1,32 @@
-import java.util.Collection;
+public class Person {
+    private String firstName;
+    private String lastName;
+    private String ssn;
+    private Doctor assignedDoctor;
 
-public class Doctor {
-    public int getId(){
-        return -1;
+    public Person(String firstName, String lastName, String ssn) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.ssn = ssn;
     }
 
-    public String getSpecialization(){
-        return null;
+    public String getSSN() {
+        return ssn;
     }
 
-    public Collection<Person> getPatients() {
-        return null;
+    public String getFirst() {
+        return firstName;
+    }
+
+    public String getLast() {
+        return lastName;
+    }
+
+    public Doctor getDoctor() {
+        return assignedDoctor;
+    }
+
+    void setDoctor(Doctor doctor) {
+        this.assignedDoctor = doctor;
     }
 }
